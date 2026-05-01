@@ -1,9 +1,9 @@
 # ATS Resume Scorer
 
-A semantic resume-job description matcher using sentence transformers. Unlike keyword-based ATS systems, this tool understands **meaning** — so 'built ML pipelines' matches 'MLOps experience' even without exact word overlap.
+A semantic resume-job description matcher using sentence transformers. Unlike keyword-based ATS systems, this tool understands **meaning** ï¿½ so 'built ML pipelines' matches 'MLOps experience' even without exact word overlap.
 
 ## Live Demo
-> Coming soon — deploying to Render
+> Coming soon ï¿½ deploying to Render
 
 ## How It Works
 
@@ -11,7 +11,7 @@ A semantic resume-job description matcher using sentence transformers. Unlike ke
 2. Paste the job description
 3. Get a semantic similarity score, matched keywords, and missing skills
 
-Traditional ATS tools use TF-IDF keyword matching. This tool uses \ll-MiniLM-L6-v2\ sentence embeddings to compare meaning in vector space — a fundamentally more accurate approach.
+Traditional ATS tools use TF-IDF keyword matching. This tool uses \ll-MiniLM-L6-v2\ sentence embeddings to compare meaning in vector space ï¿½ a fundamentally more accurate approach.
 
 ## Tech Stack
 
@@ -27,16 +27,16 @@ Traditional ATS tools use TF-IDF keyword matching. This tool uses \ll-MiniLM-L6
 PDF Resume --+
              +--? Text Extraction (pdfplumber)
 Job Description --+
-                    ¦
+                    ï¿½
                     ?
          Sentence Embeddings (MiniLM-L6-v2)
-                    ¦
+                    ï¿½
                     ?
          Cosine Similarity Score
-                    ¦
+                    ï¿½
                     ?
          Keyword Gap Analysis (spaCy)
-                    ¦
+                    ï¿½
                     ?
          JSON Response via FastAPI
 \\\
@@ -100,4 +100,4 @@ docker run -p 8000:8000 ats-scorer
 
 ## Author
 
-**Aditya Kr Biswas** — [GitHub](https://github.com/AdityaBiswas-ctrl) · [LinkedIn](https://linkedin.com/in/your-linkedin)
+**Aditya Kr Biswas** ï¿½ [GitHub](https://github.com/AdityaBiswas-ctrl) ï¿½ [LinkedIn](https://linkedin.com/in/your-linkedin)

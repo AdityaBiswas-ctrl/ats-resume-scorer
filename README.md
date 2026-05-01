@@ -100,4 +100,4 @@ docker run -p 8000:8000 ats-scorer
 
 ## Author
 
-**Aditya Kr Biswas** � [GitHub](https://github.com/AdityaBiswas-ctrl) � [LinkedIn](https://linkedin.com/in/your-linkedin)
+**Aditya Kr Biswas** � [GitHub](https://github.com/AdityaBiswas-ctrl) 

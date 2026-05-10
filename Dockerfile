@@ -1,7 +1,7 @@
 # Dockerfile
 
 # Use an official Python slim image — smaller and faster than the full image
-FROM python:3.10-slim
+FROM python:3.11-slim
 
 # Set working directory inside the container
 WORKDIR /app

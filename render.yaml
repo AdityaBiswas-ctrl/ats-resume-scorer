@@ -16,4 +16,7 @@ services:
       - key: PYTHON_VERSION
         value: 3.10.0
       - key: API_URL
-        value: "https://ats-backend.onrender.com"
+        fromService:
+          type: web
+          name: ats-backend
+          property: hostport

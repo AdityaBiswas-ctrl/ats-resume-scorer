@@ -31,6 +31,8 @@ if st.button("Analyse Match", type="primary"):
             try:
                 # Send a multipart form request to the FastAPI backend
                 API_URL = os.environ.get("API_URL", "http://localhost:8000")
+                if not API_URL.startswith("http"):
+                    API_URL = f"https://{API_URL}"
                 response = requests.post(
                     f"{API_URL}/score",
                     files={"resume_file": (uploaded_file.name, uploaded_file.getvalue(), "application/pdf")},

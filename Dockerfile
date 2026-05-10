@@ -15,10 +15,14 @@ RUN pip install --no-cache-dir -r requirements.txt
 RUN python -m spacy download en_core_web_sm
 
 # Copy the rest of the application code
-COPY app/ ./app/
+COPY . .
 
-# Expose port 8000 for the FastAPI server
+# Copy the startup script
+COPY start.sh .
+RUN chmod +x start.sh
+
+# Expose port 8000 for the FastAPI server (internal use, but good practice)
 EXPOSE 8000
 
-# Run the FastAPI app using uvicorn
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+# Run the startup script
+CMD ["./start.sh"]

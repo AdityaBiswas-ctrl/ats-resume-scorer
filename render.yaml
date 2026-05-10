@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: ats-backend
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: PORT
+        value: 8000
+
+  - type: web
+    name: ats-frontend
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run streamlit_app.py --server.port $PORT --server.address 0.0.0.0
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.0
+      - key: API_URL
+        value: "https://ats-backend.onrender.com"

@@ -2,6 +2,7 @@
 
 import streamlit as st
 import requests
+import os
 
 # Page config
 st.set_page_config(page_title="ATS Resume Scorer", page_icon="📄", layout="centered")
@@ -29,8 +30,9 @@ if st.button("Analyse Match", type="primary"):
         with st.spinner("Analysing semantic similarity..."):
             try:
                 # Send a multipart form request to the FastAPI backend
+                API_URL = os.environ.get("API_URL", "http://localhost:8000")
                 response = requests.post(
-                    "http://localhost:8000/score",
+                    f"{API_URL}/score",
                     files={"resume_file": (uploaded_file.name, uploaded_file.getvalue(), "application/pdf")},
                     data={"job_description": jd_text}
                 )
